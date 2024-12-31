@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>Main page</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Lembrete de Tarefas</h1>
+        <div class="insert_events">
+            <form action="/cadastrar" method="POST">
+                <label for="nome">Nome da Tarefa</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome da tarefa">
+                <label for="pessoa">Quem deve realizar</label>
+                <input type="text" name="pessoa" id="pessoa" placeholder="Quem deve realizar">
+                <label for="data">Data limite para realizar</label>
+                <input type="date" name="data" id="data" placeholder="Data limite para realizar">
+                <label for="desc">Descrição da tarefa</label>
+                <textarea name="desc" id="desc" cols="55" rows="5" ></textarea>
+                <div class="btns">
+                    <button class="btn" name="acao" value="cadastrar" id="cad" type="submit">Cadastrar</button>
+                    <button class="btn" name="acao" value="visualizar" type="submit">Ver tarefas</button>
+                    <button class="btn" name="acao" value="deletar" type="submit">Deletar tarefas</button>
+                </div>
+            </form>
+        </div>
+        <div class="events">
+        <ul class="events_list">
+            {% for task in tasks %}
+            <li class="events_list_item">
+                <h3 class="task_title">Nome da tarefa: {{task.nome}}</h3>
+                <p class="date">Data limite: {{task.dt_limite}}</p>
+                <p class="pessoa">Quem deve realizar: {{task.pessoa}}</p>
+                <p class="description">Descrição da tarefa: {{task.descricao}} </p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    </div>
+
+
+</body>
+</html>

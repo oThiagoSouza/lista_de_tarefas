@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+}
+
+body{
+    background: #1679AB;
+
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.title{
+    padding: 40px;
+    text-align: center;
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label{
+        margin-bottom: 8px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    input{
+        width: 500px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        padding: 8px;
+    }
+
+    textarea{
+        resize: none;
+        border-radius: 5px;
+        margin-bottom: 12px;
+    }
+}
+
+.btns{
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+}
+
+.btn{
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+}
+
+
+.events{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.events_list{
+    width: 500px;
+}
+
+.events_list_item p{
+    margin-bottom: 8px;
+}
+
+.task_title{
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
